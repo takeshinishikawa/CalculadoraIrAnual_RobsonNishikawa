@@ -10,7 +10,7 @@
             new TableLine { MaxRange = 55976.16, Aliquot = 0.225, ValueToDeduce = 7633.51 },
             new TableLine { MaxRange = double.MaxValue, Aliquot = 0.275, ValueToDeduce = 10432.32 }
         };
-        public static TableLine GetLine(double value, ref TableLine line)
+        public static void GetLine(double value, ref TableLine line)
         {
             foreach (TableLine tableLine in Table)
             {
@@ -18,7 +18,7 @@
                 if (value <= tableLine.MaxRange)
                     break;
             }
-            return line;
+            return;
         }
     }
 }
