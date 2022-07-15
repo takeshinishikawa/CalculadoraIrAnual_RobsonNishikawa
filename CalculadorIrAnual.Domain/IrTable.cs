@@ -15,7 +15,7 @@
             foreach (TableLine tableLine in Table)
             {
                 line = tableLine;
-                if (value < tableLine.MaxRange)
+                if (value <= tableLine.MaxRange)
                     break;
             }
             return line;
